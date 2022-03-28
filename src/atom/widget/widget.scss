@@ -1,0 +1,45 @@
+.widgetWrapper {
+  @apply flex  flex-1 justify-between p-2 text-[12px] rounded-[10px] h-[100px];
+  box-shadow: -2px 4px 10px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: -1px 1px 40px 0px rgba(0, 0, 0, 0.75);
+
+  .left,
+  .right {
+    @apply flex-col flex justify-between;
+  }
+
+  .title {
+    @apply text-[13px] font-bold text-gray-500;
+  }
+
+  .counter {
+    @apply text-[28px] font-light;
+  }
+  .link {
+    @apply text-xs border-b-[1px] border-gray-400 w-max;
+  }
+}
+
+.right {
+  .percentage {
+    @apply flex items-center gap-[1px];
+
+    &.positive {
+      color: green;
+    }
+    &.negative {
+      color: red;
+    }
+    .icon {
+      background-color: rgb(211, 150, 211);
+      border-radius: 4px;
+    }
+  }
+}
+
+.icon-wrapper {
+  .icon {
+    @apply bg-purple-500 p-[5px] rounded-[5px];
+  }
+}

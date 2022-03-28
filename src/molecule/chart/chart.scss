@@ -1,0 +1,49 @@
+.chart {
+  @apply flex flex-[2] p-[10px] flex-col;
+
+  box-shadow: -2px 4px 10px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: -1px 1px 40px 0px rgba(0, 0, 0, 0.75);
+
+  .top {
+    @apply flex justify-between text-[gray];
+  }
+  .bottom {
+    @apply flex flex-col justify-center items-center p-5 gap-[15px];
+
+    .featuredChart {
+      width: 100px;
+      height: 100px;
+    }
+    .title {
+      @apply from-neutral-300 text-gray-500;
+    }
+    .amount {
+      @apply text-[30px];
+    }
+    .desc {
+      @apply from-neutral-300 text-[12px] text-gray-500 text-center;
+    }
+
+    .summary {
+      @apply flex justify-between w-[100%] items-center;
+
+      .item {
+        text-align: center;
+      }
+      .itemTitle {
+        @apply text-gray-500 text-[12px];
+      }
+      .itemResult {
+        @apply flex items-center mt-[10px] text-[14px];
+
+        &.positive {
+          color: green;
+        }
+        &.negative {
+          color: red;
+        }
+      }
+    }
+  }
+}
