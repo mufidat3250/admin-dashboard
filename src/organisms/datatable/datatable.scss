@@ -1,0 +1,23 @@
+.dataTable {
+  @apply h-[550px] p-[20px];
+
+  .cellWithStatus {
+    @apply p-[5px] rounded-[5px];
+
+    &.active {
+      color: green;
+      background-color: rgba(0, 128, 0, 0.05);
+    }
+    &.passive {
+      color: crimson;
+      background-color: rgba(247, 165, 165, 0.5);
+    }
+    &.pending {
+      color: goldenrod;
+      background-color: rgba(255, 0, 0, 0.05);
+    }
+  }
+}
+.cellHeader {
+  text-align: center;
+}

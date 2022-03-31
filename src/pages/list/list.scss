@@ -1,0 +1,7 @@
+.list {
+  @apply flex w-[100%];
+
+  .listContainer{
+      @apply flex-[6]
+  }
+}

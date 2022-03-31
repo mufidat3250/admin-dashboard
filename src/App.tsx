@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import './App.scss'
-import Home from './organisms/home/home'
+import Home from './pages/home/home'
 import {Route, Routes} from 'react-router-dom'
-import List from './organisms/list/list'
-import Login from './organisms/login/login'
-import Single from './organisms/single/single'
-import New from './organisms/new/new'
+import List from './pages/list/list'
+import Login from './pages/login/login'
+import Single from './pages/single/single'
+import New from './pages/new/new'
 
 function App() {
   const [count, setCount] = useState(0)

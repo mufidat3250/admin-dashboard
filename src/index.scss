@@ -4,6 +4,8 @@
 body {
   // margin: 0;
   font-family: "Nunito", "sans-serif";
+  height: 100vh;
+  overflow: hidden;
 }
 
 * {
@@ -13,5 +15,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 @tailwind utilities;

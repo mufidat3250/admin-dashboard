@@ -1,5 +1,5 @@
 .side-bar {
-  @apply flex-[1] border-r-[0.5px] border-gray-300 h-full;
+  @apply flex-[1] border-r-[0.5px] border-gray-300 h-auto;
 
   .logo {
     @apply flex  h-12 text-center items-center 

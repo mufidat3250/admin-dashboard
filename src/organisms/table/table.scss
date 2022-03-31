@@ -1,0 +1,22 @@
+.table {
+  .cellWrapper {
+    @apply flex items-center;
+
+    .image {
+      @apply w-[32px] h-[32px] rounded-[50%] object-cover mr-1;
+    }
+  }
+
+  .status {
+    @apply p-[5px] rounded flex justify-center;
+
+    &.approved {
+      color: green;
+      background: rgb(158, 243, 158, 0.2);
+    }
+    &.pending {
+      color: goldenrod;
+      background-color: rgb(243, 216, 148, 0.2);
+    }
+  }
+}
