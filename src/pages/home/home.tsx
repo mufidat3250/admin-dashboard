@@ -1,6 +1,6 @@
-import Sidebar from '../../layout/sidebar/sidebar'
+import Sidebar from '../../molecule/sidebar/sidebar'
 import './home.scss'
-import Navbar from '../../layout/navbar/navbar'
+import Navbar from '../../molecule/navbar/navbar'
 import SearchIcon from '@mui/icons-material/Search';
 import Widget from '../../atom/widget/widget';
 import Chart from '../../molecule/chart/chart';
@@ -23,7 +23,7 @@ function Home() {
             </div>
             <div className='chart-wrapper'>
                 <Chart/>
-                <Featured/>
+                <Featured aspect={2/1} title=''/>
             </div>
           <div className='listContainer'>
               <div className='listTitle'>Latest Transactions</div>

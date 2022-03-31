@@ -3,6 +3,12 @@ import './featured.scss'
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 import { AreaChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Area } from 'recharts';
 
+type featuredProp = {
+  aspect:number;
+  title:string
+
+}
+
 const datas = [
   {
     name: 'Page A',
@@ -70,11 +76,11 @@ const data = [
 
 ]
 
-function Featured() {
+function Featured({aspect, title}:featuredProp) {
   return (
     <div className='featured'>
-      <div className='title text-gray-500'> Last 6 Months (revenue) </div>
-         <ResponsiveContainer width="100%" aspect={2/1}>
+      <div className='title text-gray-500'>{title} Last 6 Months (revenue) </div>
+         <ResponsiveContainer width="100%" aspect={aspect}>
          <AreaChart width={730} height={250} data={data}
   margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
   <defs>

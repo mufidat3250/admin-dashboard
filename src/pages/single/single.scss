@@ -1,0 +1,50 @@
+.single {
+  @apply flex;
+
+  .singleContainer {
+    @apply flex-[6];
+
+    .chilren {
+      @apply flex flex-col p-[15px];
+
+      .top {
+        @apply flex gap-[20px];
+
+        .left {
+          @apply flex-1 p-[15px] pt-[20px] rounded-[8px] relative;
+          box-shadow: -2px 4px 10px 1px rgba(0, 0, 0, 0.2);
+          -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.15);
+          -moz-box-shadow: -1px 1px 40px 0px rgba(0, 0, 0, 0.75);
+
+          .details {
+            .itemTitle {
+              @apply text-[#555] mb-[10px] font-extrabold;
+            }
+            .detailItem {
+              @apply text-[14px] mb-[0];
+
+              .itemKey {
+                @apply text-[gray] font-bold mr-[10px];
+              }
+              .itemValue {
+                @apply font-[300];
+              }
+            }
+          }
+        }
+        .right {
+          @apply flex-[2];
+        }
+      }
+
+      .bottom {
+        box-shadow: -2px 4px 10px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: -1px 1px 40px 0px rgba(0, 0, 0, 0.75);
+      }
+    }
+    .title {
+      @apply text-[16px] font-[500] text-[lightgray];
+    }
+  }
+}
