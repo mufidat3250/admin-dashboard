@@ -9,9 +9,9 @@ function Single() {
   return (
     <div className='single '>
       <SideBar/>
-      <div className='singleContainer'>
+      <div className='singleContainer flex flex-col '>
         <NavBar/>
-        <div className='chilren flex flex-col flex-grow=1 overflow-scroll'>
+        <div className='chilren flex flex-col flex-grow overflow-auto'>
           <div className='top'>
             <div className='left'>
               <div className='absolute text-[blue] right-0 top-0 bg-[#cae5f7] p-[2px] text-[13px] rounded-bl-[5px]'>Edit</div>
@@ -44,8 +44,9 @@ function Single() {
             <Featured aspect={5/1} title='User Spending'/>
             </div>
           </div>
-          <div className='pt-[20px] pb-[20px]'><h1 className='title'>Last Transactions</h1></div>
-          <div className='bottom'>          
+          
+          <div className='bottom flex flex-col'>    
+          <h1 className='title self-start pb-[10px] pt-[10px]'>Last Transactions</h1>     
             <TableList/>
           </div>
         </div>

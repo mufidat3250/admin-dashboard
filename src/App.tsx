@@ -6,6 +6,7 @@ import List from './pages/list/list'
 import Login from './pages/login/login'
 import Single from './pages/single/single'
 import New from './pages/new/new'
+import {userInputs, productInputs} from './formSource'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,12 +21,12 @@ function App() {
             <Route path='/user'>
               <Route  index element={<List/>}/>
               <Route path=':id' element = {< Single/>}/>
-              <Route path = 'new' element = {<New/>}/>
+              <Route path = 'new' element = {<New inputs ={userInputs} title='Add New User'/>}/>
             </Route>
             <Route path='/products'>
               <Route  index element={<List/>}/>
               <Route path=':product id' element = {< Single/>}/>
-              <Route path = 'new' element = {<New/>}/>
+              <Route path = 'new' element = {<New inputs = {productInputs} title='Add New Product'/>}/>
             </Route>
         </Route>      
     </Routes>
