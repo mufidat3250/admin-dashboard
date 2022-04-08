@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import Navbar from '../../molecule/navbar/navbar'
 import Sidebar from '../../molecule/sidebar/sidebar'
 import {useState} from 'react'
@@ -14,9 +14,13 @@ type newProps = {
 
 function New({title, inputs}:newProps) {
 
-  const [file, setFile] = useState('')
+  const [file, setFile] = useState<FileList | null>()
+  console.log(file)
+  const handleChange = ({currentTarget:{files}}: React.ChangeEvent<HTMLInputElement>)=>{
+    setFile(files)
+  }
 
- 
+  console.log({file})
   return (
     <div className='new'>
       <Sidebar/>
@@ -27,7 +31,7 @@ function New({title, inputs}:newProps) {
         </div>
         <div className='bottom_'>
           <div className='left'> 
-          <img src="https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg" 
+          <img src={file? URL.createObjectURL([...file][0]):"https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg" }
           alt=""
            className='itemImg w-[100px] h-[100px] rounded-[50%]'/>
           </div>
@@ -37,7 +41,7 @@ function New({title, inputs}:newProps) {
                 <label htmlFor="inputFile">
                 Image: <DriveFolderUploadOutlinedIcon className='icon'/>
                 </label>
-                <input type="file" placeholder='file'  id='inputFile' className='hidden' />
+                <input type="file" placeholder='file' onChange={handleChange} id='inputFile' className='hidden' />
               </div>
               
               {inputs.map((input)=> <div className='formInput' key ={input.id}>

@@ -76,7 +76,7 @@ function TableList() {
     <Table sx={{ minWidth: 650 }} aria-label="simple table">
       <TableHead>
         <TableRow>
-          <TableCell>Tracking ID</TableCell>
+          <TableCell className='tableCell'>Tracking ID</TableCell>
           <TableCell className="tableCell">Product</TableCell>
           <TableCell className="tableCell">Customer</TableCell>
           <TableCell className="tableCell">Date</TableCell>
@@ -90,7 +90,7 @@ function TableList() {
           <TableRow    
             key={row.id}
           >
-            <TableCell>
+            <TableCell className='tableCell'>
               {row.id}
             </TableCell>
             <TableCell className='tableCell'>

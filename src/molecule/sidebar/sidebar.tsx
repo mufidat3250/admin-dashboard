@@ -11,23 +11,35 @@ import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
+import {Link}from 'react-router-dom'
+import {useContext} from 'react'
+import {DarkmodeContext}from '../../context/darkmodeContext'
 
 function Sidebar() {
+    const {dispatch} = useContext(DarkmodeContext)    
+    
   return (
     <div className='side-bar'>
-        <div className='logo'>Miss_Nice</div>
+     <Link to='/'>
+     <div className='logo'>Miss_Nice</div>
+     </Link>
        <div className='center'>
            <p className='title'>MAIN</p>
            <ul className=''>
                <li>  <DashboardIcon className='icon'/><span>Dashboard</span></li>
            </ul>
            <p className='title'>LISTS</p>
-           <ul>
-               <li>  <PersonOutlineIcon className='icon'/> <span>User</span></li>
+         <Link to ='/users'>
+         <ul>
+               <li>  <PersonOutlineIcon className='icon'/> <span>Users</span></li>
            </ul>
+         </Link>
+         <Link to ='/products'>
            <ul>
                <li> <CategoryOutlinedIcon className='icon'/><span> Products</span></li>
            </ul>
+
+           </Link>
            <ul>
                <li> <PaymentOutlinedIcon className='icon'/> <span>Orders</span></li>
            </ul>
@@ -60,8 +72,9 @@ function Sidebar() {
            </ul>
        </div> 
        <div className='bottom'>
-           <div className='color-option'></div>
-           <div className='color-option'></div>
+           <div className='color-option' onClick={()=>dispatch({type: 'LIGHT'})}>
+           </div>
+           <div className='color-option' onClick={()=>dispatch({type:'DARK'})}></div>
         </div>   
     </div>
   )

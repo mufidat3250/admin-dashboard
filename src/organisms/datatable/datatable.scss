@@ -1,6 +1,19 @@
 .dataTable {
   @apply h-[550px] p-[20px];
 
+  .title {
+    @apply flex w-[100%] justify-between items-center p-[10px] text-[gray];
+
+    .addbutton {
+      border: 1px solid green;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      color: green;
+    }
+  }
+
   .cellWithStatus {
     @apply p-[5px] rounded-[5px];
 

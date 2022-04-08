@@ -7,18 +7,24 @@ import Login from './pages/login/login'
 import Single from './pages/single/single'
 import New from './pages/new/new'
 import {userInputs, productInputs} from './formSource'
+import './styles/dark.scss'
+import {useContext} from 'react'
+import {DarkmodeContext} from './context/darkmodeContext'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const {state} = useContext(DarkmodeContext)
+  const darkmode = state.darkmode
+  console.log(state)
 
   return (
-    <div className="App">
+    <div className={darkmode? 'app dark':'app'}>
      
     <Routes>
         <Route path='/'>
             <Route index element={<Home/>}/>
             <Route path='login' element={<Login/>}/>
-            <Route path='/user'>
+            <Route path='/users'>
               <Route  index element={<List/>}/>
               <Route path=':id' element = {< Single/>}/>
               <Route path = 'new' element = {<New inputs ={userInputs} title='Add New User'/>}/>
