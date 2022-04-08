@@ -13,9 +13,7 @@ type newProps = {
 
 
 function New({title, inputs}:newProps) {
-
   const [file, setFile] = useState<FileList | null>()
-  console.log(file)
   const handleChange = ({currentTarget:{files}}: React.ChangeEvent<HTMLInputElement>)=>{
     setFile(files)
   }

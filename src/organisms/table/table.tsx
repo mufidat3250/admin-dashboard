@@ -9,68 +9,58 @@ import Paper from '@mui/material/Paper';
 import './table.scss'
 function TableList() {
 
-    const row = [
-        {
-            id: Math.random().toString(36).substring(3,7),
-            product:'ASUS ROG STrix',
-            img:'https://images.unsplash.com/photo-1608403890614-ec62cb35b46e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80',
-            customer:'john Smith',
-            date:'1 March',
-            amount: 789,
-            method:'Cash on Delivery',
-            status:'approved'
-        },
-        {
-            id: Math.random().toString(36).substring(3,7),
-            product:'Mango',
-            img:'https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=578&q=80',
-            customer:'john Smith',
-            date:'1 March',
-            amount: 789,
-            method:'Cash on Delivery',
-            status:'pending'
-        },
-        {
-            id: Math.random().toString(36).substring(3,7),
-            product:'Shirt',
-            img:'https://images.unsplash.com/photo-1525540810550-5032f5d191b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
-            customer:'john Smith',
-            date:'1 March',
-            amount: 789,
-            method:'Cash on Delivery',
-            status:'approved'
-        },
-        {
-            id: Math.random().toString(36).substring(3,7),
-            product:'Toys R Us',
-            img:'https://images.unsplash.com/photo-1608403890614-ec62cb35b46e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80',
-            customer:'john Smith',
-            date:'1 March',
-            amount: 789,
-            method:'Cash on Delivery',
-            status:'pending'
-        },
-        {
-            id: Math.random().toString(36).substring(3,7),
-            product:'E*Trade',
-            img:'https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=578&q=80',
-            customer:'john Smith',
-            date:'1 March',
-            amount: 789,
-            method:'Cash on Delivery',
-            status:'pending'
-        },
-        {
-            id: Math.random().toString(36).substring(3,7),
-            product:'General Motors',
-            img:'https://images.unsplash.com/photo-1525540810550-5032f5d191b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
-            customer:'john Smith',
-            date:'1 March',
-            amount: 789,
-            method:'Cash on Delivery',
-            status:'approved'
-        }
-    ]
+  const rows = [
+    {
+      id: 1143155,
+      product: "Acer Nitro 5",
+      img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
+      customer: "John Smith",
+      date: "1 March",
+      amount: 785,
+      method: "Cash on Delivery",
+      status: "Approved",
+    },
+    {
+      id: 2235235,
+      product: "Playstation 5",
+      img: "https://m.media-amazon.com/images/I/31JaiPXYI8L._AC_UY327_FMwebp_QL65_.jpg",
+      customer: "Michael Doe",
+      date: "1 March",
+      amount: 900,
+      method: "Online Payment",
+      status: "Pending",
+    },
+    {
+      id: 2342353,
+      product: "Redragon S101",
+      img: "https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_UY327_FMwebp_QL65_.jpg",
+      customer: "John Smith",
+      date: "1 March",
+      amount: 35,
+      method: "Cash on Delivery",
+      status: "Pending",
+    },
+    {
+      id: 2357741,
+      product: "Razer Blade 15",
+      img: "https://m.media-amazon.com/images/I/71wF7YDIQkL._AC_UY327_FMwebp_QL65_.jpg",
+      customer: "Jane Smith",
+      date: "1 March",
+      amount: 920,
+      method: "Online",
+      status: "Approved",
+    },
+    {
+      id: 2342355,
+      product: "ASUS ROG Strix",
+      img: "https://m.media-amazon.com/images/I/81hH5vK-MCL._AC_UY327_FMwebp_QL65_.jpg",
+      customer: "Harold Carol",
+      date: "1 March",
+      amount: 2000,
+      method: "Online",
+      status: "Pending",
+    },
+  ];
   return (
     <TableContainer component={Paper} className='table'>
     <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -86,7 +76,7 @@ function TableList() {
         </TableRow>
       </TableHead>
       <TableBody>
-        {row.map((row) => (
+        {rows.map((row) => (
           <TableRow    
             key={row.id}
           >
